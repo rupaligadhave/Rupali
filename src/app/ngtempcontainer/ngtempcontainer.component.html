@@ -1,0 +1,27 @@
+<p>ngtempleate and ng-container</p>
+
+<div *ngIf="checkflage">
+    This is True Div
+</div>
+<div *ngIf="!checkflage">
+    This is Flase Div
+</div>
+
+<!-- ng-templeate -->
+<div *ngIf="checkflage else showngtemplate" >
+    this is true div
+</div>
+<ng-template #showngtemplate>
+    this is else block
+</ng-template><br><br>
+
+<!-- simple *ngFor -->
+<div *ngFor="let a of color">
+{{a}}
+</div>
+<!-- using ng-container -->
+<ng-container *ngFor="let a of color">
+    {{a}}
+
+</ng-container>
+

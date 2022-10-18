@@ -1,0 +1,16 @@
+<div class="container mt-3">
+    <h2>parent component</h2>
+    <div class="card">
+      <!-- <div class="card-header">Header</div> -->
+      <div class="card-body">
+        <p>This is parent component:</p>
+        <br><br>
+        <p>Data form Child component is:{{ dataformchildtoparent}}</p>
+        
+      </div> 
+      <div class="card-footer">Footer</div>
+    </div>
+  </div>
+
+  <app-chlid [parentData]=" dataformparenttochild" (childevent)="emitDataFromchild($event)"></app-chlid>
+
